@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sky{
+            width: 100%;
+            height: 600px;
+            background:skyblue;
+            position: relative;
+        }
+        .field{
+            width: 100%;
+            height: 250px;
+            background:greenyellow;
+            position:relative;
+            top:-250px;
+        }
+        .field:hover .player{
+            transform: rotate(0deg);
+            transition: transform 0.2s ease-in;
+        }
+        .field:hover #ball{
+            transform: translate(1200px,350px) scale(.75);
+            transition: transform .8s ease-out .2s;
+
+        }
+        .player{
+            position: absolute;
+            width: 30%;
+            left: 0px;
+            top:-160%;
+            transform: rotate(-50deg);
+        }
+        #ball{
+            width: 75px;
+            height:75px;
+            top:-325px;
+            position: absolute;
+            background-color:white ;
+            border-radius: 50%;
+            left:283px;
+            box-shadow: 2px 2px 5px black;
+        }
+        .goalpost{
+            position: absolute;
+            width: 40%;
+            right: 0;
+            top:-80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="field">
+        <img src="images/bicycle-kick.png" alt="" class="player">
+        <img src="images/football-goal-37057.png" alt="" class="goalpost">
+        <div id="ball"></div>
+    </div>
+
+</body>
+</html>
